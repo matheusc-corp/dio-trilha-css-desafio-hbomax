@@ -1,6 +1,33 @@
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: #161616;
-    color: #fff;
+    /* background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e); */
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +36,10 @@ header {
     gap: 2.5rem;
     padding: 0 2.5rem;
     padding-top: 13rem;
+
+    
 }
+
 
 #empresas-logo {
     display: flex;
@@ -34,10 +64,11 @@ header .manchete p:nth-child(2) {
 }
 
 hr {
-    width: 170px;
+    width: 70%;
+    max-width: 700px;
     height: 5px;
     border: none;
-    background-color: red;
+    background: var(--divider-bg-color);
     margin: 0;
 }
 
@@ -60,17 +91,28 @@ header .assinatura p:first-child{
     font-weight: 100;
 }
 
-header button {
-    background-color: violet;
+.button {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
     border: none;
-    border-radius: 50px;
-    width: 240px;
-    height: 70px;
-    padding: 1rem 2.5rem;
-    color: #fff;
-    font-family: "Raleway", sans-serif;;
-    font-size: 1rem;
-    font-weight: 900;
+    cursor: pointer;
+}
+
+.button.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.button-wiggle {
+    animation: wiggle 2.2s linear infinite;
 }
 
 header .info-assinatura {
@@ -79,8 +121,8 @@ header .info-assinatura {
 }
 
 main {
-    background-color: #020228;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 1.5rem;
 }
 
@@ -90,7 +132,7 @@ main {
 }
 
 #cards .card {
-    background-color: #490cb0;
+    background: var(--card-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,11 +150,11 @@ main {
 
 #cards .card .assinatura p {
     font-size: 1.5rem;
-    color: #ff00e5;
+    color: var(--secondary-color);
 }
 
 #cards .card .assinatura p span {
-    color: #fff;
+    color: var(--text-color);
 }
 
 #cards .card ul {
@@ -129,24 +171,6 @@ main {
 #cards .card li::marker {
     content: "+";
     font-size: 2rem;
-}
-
-#cards .card button {
-    background-color: violet;
-    border: none;
-    border-radius: 50px;
-    width: 190px;
-    height: 70px;
-    padding: 1rem 2.5rem;
-    color: #fff;
-    font-family: "Raleway", sans-serif;;
-    font-size: .825rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -169,13 +193,13 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem;
-    background-color: #020228;
-    color: #9e86ff;
+    background-color: var(--primary-color);
+    color: var(--link-color);
 }
 
 footer a {
     text-decoration: none;
-    color: #9e86ff;
+    color: var(--link-color);
     font-size: .875rem;
     font-weight: 900;    
     margin: 0 .875rem 1rem;
@@ -198,3 +222,23 @@ footer p {
     margin-top: 80px;
 }
 
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+    15% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(10deg);
+    }
+    40%, 100% {
+        transform: rotate(0);
+    }
+}
