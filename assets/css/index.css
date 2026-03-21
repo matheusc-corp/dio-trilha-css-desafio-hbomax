@@ -209,39 +209,6 @@ main {
     max-width: 100%;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--link-color);
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--link-color);
-    font-size: .875rem;
-    font-weight: 900;
-    margin: 0 .875rem 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-footer p {
-    font-family: 'Quicksand', sans-serif;
-    font-size: .75rem;
-    text-align: center;
-    margin: 1rem 0;
-    font-weight: 100;
-}
-
-footer .links {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 #social-media {
     display: flex;
     flex-direction: row;
@@ -322,11 +289,6 @@ footer .links {
         
         max-width: 350px;
         max-height: 530px;
-    }
-
-    footer .links {
-        display: flex;
-        flex-direction: row;
     }
 }
 
