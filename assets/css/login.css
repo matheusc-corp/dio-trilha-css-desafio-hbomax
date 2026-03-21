@@ -79,6 +79,10 @@ main {
     padding: 1rem;
 }
 
+.container .login input:invalid {
+    border-color: red;
+}
+
 .container .botoes {
     display: flex;
     flex-direction: column;
