@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 40px;
+    /* width: 192px; */
+    width: 75%;
+    height: 383px;
+    /* max-width: 800px;
+    max-width: 421px; */
+    background-color: #D3D3D30F;
+
+    border-radius: 5px;
+}
+
+.container p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.container .login {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: auto;
+}
+
+.container .login p {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container .login input {
+    /* width: 100%; */
+    /* height: 53px; */
+    background-color: transparent;
+    border-color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    padding: 1rem;
+}
+
+.container .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.container .botoes .btn-entrar {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-entrar.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.container .botoes .btn-nova-senha {
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--link-color);
+}
+
+@media screen and (min-width: 481px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 40px;
+        width: 800px;
+        height: 341px;
+        /* max-width: 800px;
+    max-width: 421px; */
+        background-color: #D3D3D30F;
+        margin: 40px 0;
+        border-radius: 5px;
+    }
+
+    .container .botoes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+}
