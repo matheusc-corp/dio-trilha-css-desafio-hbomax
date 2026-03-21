@@ -24,9 +24,17 @@
     scroll-behavior: smooth;
 }
 
+body {
+    perspective: 300px;
+}
+
 header {
     background-color: #161616;
-    /* background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e); */
+    background: linear-gradient(
+        180deg, 
+        var(--primary-color), 
+        #0f0f10, 
+        var(--primary-color));
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -36,8 +44,24 @@ header {
     gap: 2.5rem;
     padding: 0 2.5rem;
     padding-top: 13rem;
-
     
+}
+
+#luz-de-fundo {
+    position: absolute;
+    background: linear-gradient(
+        90deg,
+        #fc466B,
+        #3f5efb
+    );
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    top: -200px;
+    left: -200px;
+
+    animation: luz-de-fundo 5s infinite alternate;
+    filter: blur(100px);
 }
 
 
@@ -215,6 +239,12 @@ footer p {
     font-weight: 100;
 }
 
+footer .links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 #social-media {
     display: flex;
     flex-direction: row;
@@ -242,3 +272,95 @@ footer p {
         transform: rotate(0);
     }
 }
+
+@keyframes luz-de-fundo {
+    0% {
+        transform: rotateY(10deg) rotate(-25deg) translateY(100px);
+    }
+     25% {
+        transform: rotateY(-10deg) translateX(100px);
+    }
+    50%, 100% {
+        transform: rotateX(-50deg) translateZ(-100px);
+    }
+    /*75% {
+        transform: rotateX(-50deg) translateZ(-100px);
+    }
+    100% {
+        transform: rotateX(20deg) translateZ(0px);
+
+    } */
+    
+}
+
+@media screen and (min-width: 767px) {
+    header {
+        background-color: #fff;
+        padding-top: 6rem;
+
+
+    }
+
+    #cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    #cards .card {
+        width: 520px;
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin: 0;
+    }
+
+    #cards .card .assinatura {
+        width: 480px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    #cards .card .assinatura h3 {
+        font-size: 1.5rem;
+    }
+
+    #cards .card .assinatura p {
+        font-size: 2rem;
+    }
+
+    #cards .card ul li {
+        font-size: 1.25rem;
+    }
+
+    #cards .card button {
+        margin-top: 7rem;
+    }
+
+    #series {
+        margin: 100px 0;
+        padding: 24px;
+    }
+
+    footer .links {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1141px) {
+    #cards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cards .card button {
+        color: red;
+    }
+}
+
